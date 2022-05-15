@@ -8,6 +8,6 @@ namespace MES_OpcUA.ViewModel
 {
     public class MainViewModel : ViewModel
     {
-
+        // opc.tcp://DESKTOP-4LC5DK7:53530 || 
     }
 }

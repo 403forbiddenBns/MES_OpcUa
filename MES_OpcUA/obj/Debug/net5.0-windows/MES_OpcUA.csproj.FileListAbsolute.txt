@@ -58,3 +58,4 @@ D:\github\OPC_Shit\MES_OpcUa\MES_OpcUA\obj\Debug\net5.0-windows\View\MainView.g.
 D:\github\OPC_Shit\MES_OpcUa\MES_OpcUA\obj\Debug\net5.0-windows\View\MainView.baml
 D:\github\OPC_Shit\MES_OpcUa\MES_OpcUA\obj\Debug\net5.0-windows\View\BrowserView.g.cs
 D:\github\OPC_Shit\MES_OpcUa\MES_OpcUA\obj\Debug\net5.0-windows\View\BrowserView.baml
+D:\github\OPC_Shit\MES_OpcUa\MES_OpcUA\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
