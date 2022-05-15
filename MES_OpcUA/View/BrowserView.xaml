@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MES_OpcUA.View"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
+        AllowsTransparency="True"
+        BorderThickness="5" BorderBrush="#252629"
         Title="Window1" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Border Background="Green">
+        <Border Background="#252629" BorderThickness="1">
+            <Grid Background="#1e1f21" Margin="5">
+
+            </Grid>
+        </Border>
+    </Border>
 </Window>
