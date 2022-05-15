@@ -20,3 +20,5 @@ D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-wind
 D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-windows\MES_OpcUA.pdb
 D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-windows\MES_OpcUA.genruntimeconfig.cache
 D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-windows\ref\MES_OpcUA.dll
+D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-windows\Components\StartUp.baml
+D:\gihub\WPF\OPCUA_ALL_DIFFERENT_STUFF\MES_OpcUA\MES_OpcUA\obj\Debug\net5.0-windows\App.baml
