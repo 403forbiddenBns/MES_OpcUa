@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
+    <PackageReference Include="Opc.UaFx.Advanced" Version="2.26.0" />
   </ItemGroup>
 
 </Project>

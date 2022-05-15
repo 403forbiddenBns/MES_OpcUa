@@ -2,7 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="View\BrowserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Components\StartUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\BrowserView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

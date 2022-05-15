@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\gihub\\WPF\\OPCUA_ALL_DIFFERENT_STUFF\\MES_OpcUA\\MES_OpcUA\\MES_OpcUA.csproj": {}
+    "D:\\github\\OPC_Shit\\MES_OpcUa\\MES_OpcUA\\MES_OpcUA.csproj": {}
   },
   "projects": {
-    "D:\\gihub\\WPF\\OPCUA_ALL_DIFFERENT_STUFF\\MES_OpcUA\\MES_OpcUA\\MES_OpcUA.csproj": {
+    "D:\\github\\OPC_Shit\\MES_OpcUa\\MES_OpcUA\\MES_OpcUA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\gihub\\WPF\\OPCUA_ALL_DIFFERENT_STUFF\\MES_OpcUA\\MES_OpcUA\\MES_OpcUA.csproj",
+        "projectUniqueName": "D:\\github\\OPC_Shit\\MES_OpcUa\\MES_OpcUA\\MES_OpcUA.csproj",
         "projectName": "MES_OpcUA",
-        "projectPath": "D:\\gihub\\WPF\\OPCUA_ALL_DIFFERENT_STUFF\\MES_OpcUA\\MES_OpcUA\\MES_OpcUA.csproj",
-        "packagesPath": "C:\\Users\\BansheeDT\\.nuget\\packages\\",
-        "outputPath": "D:\\gihub\\WPF\\OPCUA_ALL_DIFFERENT_STUFF\\MES_OpcUA\\MES_OpcUA\\obj\\",
+        "projectPath": "D:\\github\\OPC_Shit\\MES_OpcUa\\MES_OpcUA\\MES_OpcUA.csproj",
+        "packagesPath": "C:\\Users\\banshee\\.nuget\\packages\\",
+        "outputPath": "D:\\github\\OPC_Shit\\MES_OpcUa\\MES_OpcUA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VSpackages\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\BansheeDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\banshee\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +43,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Opc.UaFx.Advanced": {
+              "target": "Package",
+              "version": "[2.26.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
