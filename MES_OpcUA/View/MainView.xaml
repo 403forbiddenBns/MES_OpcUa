@@ -1,14 +1,16 @@
-﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<!-- x:Class="NES_OpcUA.View.MainView" -->
+<Window 
+        x:Class="MES_OpcUA.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MES_OpcUA"
-        xmlns:Components="clr-namespace:MES_OpcUA.Components" x:Class="MES_OpcUA.MainWindow"
         mc:Ignorable="d"
         Height="200" Width="700" MaxHeight="200" MaxWidth="700" MinHeight="200" MinWidth="700"
         WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
         AllowsTransparency="True"
         BorderThickness="5" BorderBrush="#252629">
+    
     <Border BorderBrush="Green" BorderThickness="1">
         <Grid Background="#1e1f21">
             <Grid.RowDefinitions>
@@ -26,13 +28,16 @@
                 BorderBrush="DarkRed" Background="IndianRed"
                 Foreground="DarkRed"
                 Content="X"
+                Command="{Binding btnExit}"
                 />
             </Border>
-            <Border x:Name="AddressBorder" Style="{StaticResource startupBorder}" Margin="10, 50,0,0"
-                    Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Components:PlaceHolderTextBox 
-                    PlaceHolderText="opc.tcp://DESKTOP-4LC5DK7:53530"
-                    Style="{StaticResource startupTextBox}" Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}"
+            <Border 
+                x:Name="AddressBorder" Style="{StaticResource startupBorder}" 
+                Margin="10, 50,0,0" Grid.RowSpan="2" 
+                HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBox 
+                    Style="{StaticResource startupTextBox}" 
+                    Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}"
                     x:Name="AddressTextBox" Width="450" Height="30"/>
             </Border>
             <Border Grid.Row="1" Grid.Column="2" Width="100" Height="100"

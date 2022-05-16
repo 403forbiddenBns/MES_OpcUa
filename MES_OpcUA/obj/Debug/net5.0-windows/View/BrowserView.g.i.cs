@@ -53,7 +53,7 @@ namespace MES_OpcUA.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MES_OpcUA;V1.0.0.0;component/view/browserview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MES_OpcUA;component/view/browserview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\BrowserView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -13,7 +13,7 @@ namespace Quick_CLI
             client.Connect();
             /////////////////
 
-            var node = client.BrowseNode(OpcObjectTypes.ObjectsFolder);
+            OpcNodeInfo node = client.BrowseNode(OpcObjectTypes.ObjectsFolder);
             Browse(node);
 
 
@@ -35,6 +35,7 @@ namespace Quick_CLI
             foreach (var childNode in node.Children())
                 Browse(childNode, level);
         }
+
 
     }
 }
