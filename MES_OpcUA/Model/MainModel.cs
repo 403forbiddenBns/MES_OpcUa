@@ -10,7 +10,7 @@ using Prism.Mvvm;
 
 namespace MES_OpcUA.Model
 {
-    class MainModel : BindableBase
+    public class MainModel : BindableBase
     {
         OpcClient opcClient; 
 

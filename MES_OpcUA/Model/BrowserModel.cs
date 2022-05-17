@@ -1,22 +1,27 @@
-﻿using Opc.UaFx;
-using System;
-using System.Collections.Generic;
+﻿using Opc.UaFx.Client;
+using Prism.Mvvm;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MES_OpcUA.Model
 {
-    internal class BrowserModel
+    public class BrowserModel : BindableBase
     {
-        //ObservableCollection<OpcObjectTypes> collection;
+        OpcClient _client;
+        ObservableCollection<OpcNodeInfo> _nodes; //TODO: Implement IPropertyChanger for this collection.
 
-        //public BrowserModel(ObservableCollection<OpcObjectType> collection)
-        //{
-            //this.collection = new ObservableCollection<OpcObjectTypes>();
-        //}
+        public OpcClient Client { get; set; }
 
+        public BrowserModel(string address)
+        {
+            Client = new OpcClient(address);
+        }
 
+        public ObservableCollection<OpcNodeInfo> Nodes 
+        { 
+            get 
+            { 
+                return _nodes;
+            } 
+        }
     }
 }

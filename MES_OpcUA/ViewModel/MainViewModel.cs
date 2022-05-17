@@ -1,5 +1,6 @@
 ﻿using MES_OpcUA.Model;
 using Opc.UaFx.Client;
+using Prism.Mvvm;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -8,19 +9,21 @@ using System.Windows.Input;
 
 namespace MES_OpcUA.ViewModel
 {
-    public class MainViewModel : ViewModel
+    public class MainViewModel : BindableBase
     {
-        private string _address = "Enter the address...";
+        private string _address;
 
         //TODO: MAKE MY COMMAND AND TRY TO LAUNCH
         public ICommand btnExit { get; set; }
+        public ICommand btnConnect { get; set; }
 
+        
 
         public string Address
         {
             get { return _address; }
             set 
-            { 
+            {
                 _address = value;
                 RaisePropertyChanged(_address);
             }
@@ -28,7 +31,7 @@ namespace MES_OpcUA.ViewModel
 
         public MainViewModel()
         {
-            //CHECK ADDRESS PROPERTY
+            Address = "123";
         }
 
         public bool ValidateURI()
@@ -38,14 +41,6 @@ namespace MES_OpcUA.ViewModel
             return true;
         }
 
-
-        public void btnConnect(string addr)
-        {
-            //if (ValidateURI())
-            //{
-            MessageBox.Show("Wrong address!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
-            //return;
-            //}
-        }
+        //MessageBox.Show("Wrong address!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
     }
 }
