@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Client.HanshakeChanges
+build_property.ProjectDir = D:\gihub\opcuanet-samples\cs\Subscriptions\Client.HandshakeChanges\

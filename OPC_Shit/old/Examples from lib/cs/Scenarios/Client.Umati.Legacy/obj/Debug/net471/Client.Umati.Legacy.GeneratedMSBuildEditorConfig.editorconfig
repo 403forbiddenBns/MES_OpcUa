@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Client.Umati.Legacy
+build_property.ProjectDir = D:\gihub\opcuanet-samples\cs\Scenarios\Client.Umati.Legacy\
