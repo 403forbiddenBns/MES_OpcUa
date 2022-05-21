@@ -9,12 +9,12 @@ namespace Quick_CLI
     {
         static void Main()
         {
-            var client = new OpcClient("opc.tcp://DESKTOP-4LC5DK7:53530");
+            var client = new OpcClient("opc.tcp://DESKTOP-4LC5DK7:53530", new OpcSecurityPolicy(OpcSecurityMode.None));
+            
             client.Connect();
             /////////////////
 
-            OpcNodeInfo node = client.BrowseNode(OpcObjectTypes.ObjectsFolder);
-            Browse(node);
+            Console.WriteLine(client.State.ToString());
 
 
             //////////////////
