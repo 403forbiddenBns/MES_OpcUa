@@ -9,7 +9,7 @@ using FUCKING_OPC.Components;
 
 namespace MES_OpcUA.ViewModel
 {
-    public class MainViewModel : BaseViewModel
+    public partial class MainViewModel : BaseViewModel
     {
 
         #region Fields
@@ -38,15 +38,18 @@ namespace MES_OpcUA.ViewModel
         {
             Application.Current.Shutdown();
         }
-
+        
         #endregion
+
 
         #region ctor
 
         public MainViewModel()
         {
+            #region CloseApp
             //TODO: HERE!
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
+            #endregion
 
 
         }

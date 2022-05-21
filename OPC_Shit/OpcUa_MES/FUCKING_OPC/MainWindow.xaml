@@ -5,14 +5,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FUCKING_OPC"
-        xmlns:vm1="clr-namespace:FUCKING_OPC.ViewModel"
-    xmlns:components="clr-namespace:FUCKING_OPC.Components"
-    Height="200" Width="700" MaxHeight="200" MaxWidth="700" MinHeight="200" MinWidth="700"
+        xmlns:components="clr-namespace:FUCKING_OPC.Components" 
+        xmlns:vm="clr-namespace:MES_OpcUA.ViewModel"
+        Height="200" Width="700" MaxHeight="200" MaxWidth="700" MinHeight="200" MinWidth="700"
         WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
         AllowsTransparency="True"
         BorderThickness="5" BorderBrush="#252629">
     <Window.DataContext>
-        <vm1:BaseViewModel/>
+        <vm:MainViewModel/>
     </Window.DataContext>
     <Border BorderBrush="Green" BorderThickness="1">
         <Grid Background="#1e1f21">
@@ -31,7 +31,7 @@
                 BorderBrush="DarkRed" Background="IndianRed"
                 Foreground="DarkRed"
                 Content="X"
-                Command="{}"/>
+                Command="{Binding CloseApplicationCommand}"/>
             </Border>
             <Border 
                 x:Name="AddressBorder" Style="{StaticResource startupBorder}" 

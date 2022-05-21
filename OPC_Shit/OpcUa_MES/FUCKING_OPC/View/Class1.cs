@@ -8,5 +8,6 @@ namespace FUCKING_OPC.View
 {
     internal class Class1
     {
+
     }
 }
