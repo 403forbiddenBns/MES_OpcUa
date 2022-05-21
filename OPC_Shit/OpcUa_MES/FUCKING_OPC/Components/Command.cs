@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace FUCKING_OPC.Components
+namespace MES_OpcUa.Components
 {
     public abstract class Command : ICommand
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+SFoMyFPbAKak9ujAvjgBB2CZWY7f2sQQI2lNHiT9fUszG4XFWjMdmTKipeoxu3hAmUP2NeFAzelETpiHcMe7Q==",
+  "dgSpecHash": "O7TzdgrTtJ0iCYhXI8iecC9oX5l1NOf5DBHVRzKtacj58nah2OGazbyMKpghN790TvwsKKzefxwnXK5TRARdBg==",
   "success": true,
-  "projectFilePath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\FUCKING_OPC.csproj",
+  "projectFilePath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\MES_OpcUa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BansheeDT\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\BansheeDT\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

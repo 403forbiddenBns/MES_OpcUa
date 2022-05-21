@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace MES_OpcUA.ViewModel
+namespace MES_OpcUa.ViewModel
 {
-    internal class BrowserViewModel
+    internal class BrowserViewModel : BaseViewModel
     {
         public BrowserViewModel()
         {

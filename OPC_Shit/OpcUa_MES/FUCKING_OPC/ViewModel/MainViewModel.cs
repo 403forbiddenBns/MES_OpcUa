@@ -1,15 +1,9 @@
-﻿using Prism.Mvvm;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using FUCKING_OPC.ViewModel;
-using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
-using FUCKING_OPC.Components;
-using Opc.UaFx.Client;
-using FUCKING_OPC.Model;
+using MES_OpcUa.Components;
+using MES_OpcUa.Model;
 
-namespace MES_OpcUA.ViewModel
+namespace MES_OpcUa.ViewModel
 {
     public partial class MainViewModel : BaseViewModel
     {

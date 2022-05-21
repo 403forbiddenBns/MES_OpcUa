@@ -1,11 +1,6 @@
 ﻿using Opc.UaFx.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FUCKING_OPC.Model
+namespace MES_OpcUa.Model
 {
     public class MainModel
     {

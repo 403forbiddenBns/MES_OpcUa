@@ -68,3 +68,5 @@ D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\r
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\FUCKING_OPC.pdb
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\FUCKING_OPC.genruntimeconfig.cache
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\ref\FUCKING_OPC.dll
+D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\BrowserView.g.cs
+D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\BrowserView.baml

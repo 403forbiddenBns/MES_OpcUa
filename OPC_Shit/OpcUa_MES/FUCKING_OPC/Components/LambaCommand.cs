@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FUCKING_OPC.Components
+namespace MES_OpcUa.Components
 {
     public class LambaCommand : Command
     {

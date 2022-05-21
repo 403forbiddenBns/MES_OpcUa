@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <StartupObject>FUCKING_OPC.App</StartupObject>
+    <StartupObject>MES_OpcUa.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

@@ -640,9 +640,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\FUCKING_OPC.csproj",
-      "projectName": "FUCKING_OPC",
-      "projectPath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\FUCKING_OPC.csproj",
+      "projectUniqueName": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\MES_OpcUa.csproj",
+      "projectName": "MES_OpcUa",
+      "projectPath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\MES_OpcUa.csproj",
       "packagesPath": "C:\\Users\\BansheeDT\\.nuget\\packages\\",
       "outputPath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\obj\\",
       "projectStyle": "PackageReference",

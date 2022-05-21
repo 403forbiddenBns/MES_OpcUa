@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FUCKING_OPC
+namespace MES_OpcUa
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
