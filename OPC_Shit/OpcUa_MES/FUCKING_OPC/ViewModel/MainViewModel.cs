@@ -30,15 +30,28 @@ namespace MES_OpcUA.ViewModel
 
         #region Commands
 
+        #region CloseApp
         public ICommand CloseApplicationCommand { get; }
-
         private bool CanCloseApplicationCommandExecute(object p) => true;
-
         private void OnCloseApplicationCommandExecuted(object p)
         {
             Application.Current.Shutdown();
         }
+        #endregion
+
+        #region Connect
         
+        public ICommand ConnectToServer { get; }
+        private bool CanConnectToServerExecute(object p) => true;
+        private void OnConnectToServerExecuted(object p)
+        {
+            string address = (string)p;
+
+        }
+
+        #endregion
+
+
         #endregion
 
 
@@ -46,10 +59,9 @@ namespace MES_OpcUA.ViewModel
 
         public MainViewModel()
         {
-            #region CloseApp
             //TODO: HERE!
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
-            #endregion
+            ConnectToServer = new LambaCommand(OnConnectToServerExecuted, CanConnectToServerExecute);
 
 
         }

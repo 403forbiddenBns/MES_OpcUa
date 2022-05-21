@@ -5,6 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <StartupObject>FUCKING_OPC.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +15,6 @@
 
   <ItemGroup>
 	  <Folder Include="ViewModel\" />
-	  <Folder Include="View\" />
 	  <Folder Include="Model\" />
 
   </ItemGroup>
