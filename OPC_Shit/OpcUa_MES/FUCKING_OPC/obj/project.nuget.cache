@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "VpMF9Ip6yK3WNhmBStwCPD+wPo+htXkffqeTp0ElDCULGVd6TYPVBAESLUK0pVsLzhW5smuYjDGDNGrW3oz3Mg==",
+  "dgSpecHash": "+SFoMyFPbAKak9ujAvjgBB2CZWY7f2sQQI2lNHiT9fUszG4XFWjMdmTKipeoxu3hAmUP2NeFAzelETpiHcMe7Q==",
   "success": true,
-  "projectFilePath": "D:\\github\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\FUCKING_OPC.csproj",
+  "projectFilePath": "D:\\gihub\\WPF\\MES_OpcUa\\OPC_Shit\\OpcUa_MES\\FUCKING_OPC\\FUCKING_OPC.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\banshee\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\opc.uafx.advanced\\2.26.0\\opc.uafx.advanced.2.26.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\portable.bouncycastle\\1.8.6\\portable.bouncycastle.1.8.6.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.private.servicemodel\\4.5.3\\system.private.servicemodel.4.5.3.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.reflection.dispatchproxy\\4.5.0\\system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\banshee\\.nuget\\packages\\system.servicemodel.primitives\\4.5.3\\system.servicemodel.primitives.4.5.3.nupkg.sha512"
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\opc.uafx.advanced\\2.26.0\\opc.uafx.advanced.2.26.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\portable.bouncycastle\\1.8.6\\portable.bouncycastle.1.8.6.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.private.servicemodel\\4.5.3\\system.private.servicemodel.4.5.3.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.reflection.dispatchproxy\\4.5.0\\system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\BansheeDT\\.nuget\\packages\\system.servicemodel.primitives\\4.5.3\\system.servicemodel.primitives.4.5.3.nupkg.sha512"
   ],
   "logs": []
 }

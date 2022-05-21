@@ -28,8 +28,6 @@ namespace MES_OpcUA.ViewModel
 
         #endregion
 
-        
-
         #region Commands
 
         public ICommand CloseApplicationCommand { get; }
@@ -63,8 +61,6 @@ namespace MES_OpcUA.ViewModel
                 return false;
             return true;
         }
-
-        
 
         #endregion
         //MessageBox.Show("Wrong address!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
