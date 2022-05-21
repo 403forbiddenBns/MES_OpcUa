@@ -6,6 +6,7 @@ using System;
 using System.Windows;
 using System.Windows.Input;
 using FUCKING_OPC.Components;
+using Opc.UaFx.Client;
 
 namespace MES_OpcUA.ViewModel
 {
@@ -15,16 +16,17 @@ namespace MES_OpcUA.ViewModel
         #region Fields
         
         private string _address;
+        private OpcClient _client;
         
         #endregion
         
         #region Props
 
         public string Address
-            {
-                get => _address;
-                set => Set(ref _address, value);
-            }
+        {
+            get => _address;
+            set => Set(ref _address, value);
+        }
 
         #endregion
 
@@ -45,7 +47,13 @@ namespace MES_OpcUA.ViewModel
         private bool CanConnectToServerExecute(object p) => true;
         private void OnConnectToServerExecuted(object p)
         {
-            string address = (string)p;
+            _client = new OpcClient((string)p);
+            _client.Connect();
+
+            MessageBox.Show(_client.State.ToString(), "Connection status", 0, MessageBoxImage.Information);
+            
+            //MessageBox.Show("Wrong address!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+
 
         }
 
@@ -78,6 +86,5 @@ namespace MES_OpcUA.ViewModel
         }
 
         #endregion
-        //MessageBox.Show("Wrong address!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
     }
 }
