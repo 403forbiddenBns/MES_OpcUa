@@ -15,13 +15,13 @@ D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\bin\Debug\net5.0-windows\r
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\bin\Debug\net5.0-windows\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\MES_OpcUa.csproj.AssemblyReference.cache
+D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\App.baml
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\BrowserView.g.cs
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\MainWindow.g.cs
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\App.g.cs
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\MES_OpcUa_MarkupCompile.cache
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\MES_OpcUa_MarkupCompile.lref
-D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\App.baml
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\BrowserView.baml
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\View\MainWindow.baml
 D:\gihub\WPF\MES_OpcUa\OPC_Shit\OpcUa_MES\FUCKING_OPC\obj\Debug\net5.0-windows\MES_OpcUa.g.resources

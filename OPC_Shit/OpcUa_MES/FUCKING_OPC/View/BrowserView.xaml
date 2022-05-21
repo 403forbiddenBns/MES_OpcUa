@@ -1,12 +1,84 @@
-﻿<Window x:Class="MES_OpcUa.View.BrowserView"
+﻿<Window x:Class="MES_OpcUa.View.BrowserView" x:Name="window"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MES_OpcUa.View"
-        mc:Ignorable="d"
-        Title="BrowserView" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        xmlns:wm="clr-namespace:MES_OpcUa.ViewModel"
+        mc:Ignorable="d" Width="600"
+        MinHeight="600" MinWidth="800" 
+        WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
+        AllowsTransparency="True"
+        BorderThickness="2" BorderBrush="#122a05">
+    <Window.DataContext>
+        <wm:BrowserViewModel/>
+    </Window.DataContext>
+    <Border BorderBrush="Green" BorderThickness="1" 
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid Background="#1e1f31" VerticalAlignment="Stretch" 
+              HorizontalAlignment="Stretch">
+            <DockPanel Background="#151229" Margin="2">
+                <DockPanel x:Name="WindowPanel" DockPanel.Dock="Top"
+                        Width="auto" Height="20" HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Top" Margin="4">
+                    <TextBlock DockPanel.Dock="Left" Text="MES OpcUA" FontSize="12" 
+                               Foreground="AliceBlue"/>
+                    <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
+                    <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
+                    <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
+                </DockPanel>
+                <StackPanel Orientation="Horizontal"
+                        DockPanel.Dock="Top" 
+                        Width="auto" Height="16" HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Top" Background="#1B1B2C">
+                    <Menu x:Name="MenuNavigation">
+                        <MenuItem Header="Options" Foreground="White" 
+                                  Background="#1b1b2c" BorderThickness="0"/>
+                    </Menu>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Top"
+                             Background="#12121d" HorizontalAlignment="Stretch" 
+                             VerticalAlignment="Top" Height="20">
+                </StackPanel>
+                <StackPanel x:Name="Footer" DockPanel.Dock="Bottom"
+                             Background="#10101a" HorizontalAlignment="Stretch" 
+                             VerticalAlignment="Bottom" Height="20" Orientation="Horizontal">
+                    <Border BorderThickness="0"
+                             VerticalAlignment="Center"
+                             HorizontalAlignment="Right">
+                        <TextBox Text="Connection:" Background="#10101a"
+                                 BorderThickness="0" Foreground="AliceBlue"/>
+                    </Border>
+                    <Border Background="Green" Width="20"
+                            Margin="10,0,0,0"/>
+                </StackPanel>
+                <Page>
+                    <DockPanel>
+                        <Border Style="{StaticResource SidePanel}" x:Name="LeftPanel" 
+                                BorderThickness="0,0,0,0" BorderBrush="#280017"
+                                MinWidth="200" Width="auto" DockPanel.Dock="Left" 
+                                HorizontalAlignment="Left">
+                        </Border>
+                        <Border Style="{DynamicResource SidePanel}" x:Name="RightPanel" 
+                                BorderThickness="0,0,0,0" BorderBrush="#280017"
+                                MinWidth="200" Width="100" DockPanel.Dock="Right"
+                                />
+
+                        <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                BorderThickness="0,0,0,0" BorderBrush="#280017">
+                            <Border VerticalAlignment="Stretch" 
+                                    HorizontalAlignment="Stretch"
+                                    Style="{StaticResource SidePanel}" Margin="0">
+                                <TextBox x:Name="formatText"
+                                            Style="{StaticResource BrowserText}"
+                                            HorizontalAlignment="Stretch" 
+                                           VerticalAlignment="Stretch">
+                                    123 ASDOFIHSPIDEGUHIPWOURGH
+                                </TextBox>
+                            </Border>
+                        </Border>
+                    </DockPanel>
+                </Page>
+            </DockPanel>
+        </Grid>
+    </Border>
 </Window>
