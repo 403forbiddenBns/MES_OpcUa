@@ -2,7 +2,6 @@
 using Opc.UaFx.Client;
 using System;
 
-
 namespace Quick_CLI
 {
     class Program
@@ -10,16 +9,20 @@ namespace Quick_CLI
         static void Main()
         {
             var client = new OpcClient("opc.tcp://DESKTOP-4LC5DK7:53530", new OpcSecurityPolicy(OpcSecurityMode.None));
-            
+
             client.Connect();
             /////////////////
 
-            Console.WriteLine(client.State.ToString());
+            var res = client.BrowseNode("i=84").Children();
+
+            foreach (var item in res)
+            {
+                Console.WriteLine(item.Name);
+            }
 
 
             //////////////////
             client.Disconnect();
-            System.Console.WriteLine();
         }
 
         static void Browse(OpcNodeInfo node, int level = 0)

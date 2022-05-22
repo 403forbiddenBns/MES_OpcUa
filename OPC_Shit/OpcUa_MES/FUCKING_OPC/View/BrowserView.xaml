@@ -9,9 +9,6 @@
         WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
         AllowsTransparency="True"
         BorderThickness="2" BorderBrush="#122a05">
-    <Window.DataContext>
-        <wm:BrowserViewModel/>
-    </Window.DataContext>
     <Border BorderBrush="Green" BorderThickness="1" 
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid Background="#1e1f31" VerticalAlignment="Stretch" 
@@ -22,7 +19,8 @@
                         VerticalAlignment="Top" Margin="4">
                     <TextBlock DockPanel.Dock="Left" Text="MES OpcUA" FontSize="12" 
                                Foreground="AliceBlue"/>
-                    <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
+                    <Button x:Name="btnExit" Width="20" DockPanel.Dock="Right" 
+                            HorizontalAlignment="Right" Command="{Binding CloseApplicationCommand}"/>
                     <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
                     <Button Width="20" DockPanel.Dock="Right" HorizontalAlignment="Right"/>
                 </DockPanel>
@@ -35,10 +33,13 @@
                                   Background="#1b1b2c" BorderThickness="0"/>
                     </Menu>
                 </StackPanel>
-                <StackPanel DockPanel.Dock="Top"
+                <Grid DockPanel.Dock="Top"
                              Background="#12121d" HorizontalAlignment="Stretch" 
                              VerticalAlignment="Top" Height="20">
-                </StackPanel>
+                    <Border BorderThickness="1" BorderBrush="Green" 
+                            VerticalAlignment="Stretch"
+                            HorizontalAlignment="Stretch"/>
+                </Grid>
                 <StackPanel x:Name="Footer" DockPanel.Dock="Bottom"
                              Background="#10101a" HorizontalAlignment="Stretch" 
                              VerticalAlignment="Bottom" Height="20" Orientation="Horizontal">
@@ -51,15 +52,18 @@
                     <Border Background="Green" Width="20"
                             Margin="10,0,0,0"/>
                 </StackPanel>
-                <Page>
+                <Grid>
                     <DockPanel>
                         <Border Style="{StaticResource SidePanel}" x:Name="LeftPanel" 
-                                BorderThickness="0,0,0,0" BorderBrush="#280017"
+                                BorderThickness="1" BorderBrush="#280017"
                                 MinWidth="200" Width="auto" DockPanel.Dock="Left" 
                                 HorizontalAlignment="Left">
+                            <TreeView x:Name="MainElementTree" Background="#1e1f31"
+                                      BorderThickness="1">
+                            </TreeView>
                         </Border>
                         <Border Style="{DynamicResource SidePanel}" x:Name="RightPanel" 
-                                BorderThickness="0,0,0,0" BorderBrush="#280017"
+                                BorderThickness="1" BorderBrush="#280017"
                                 MinWidth="200" Width="100" DockPanel.Dock="Right"
                                 />
 
@@ -77,7 +81,7 @@
                             </Border>
                         </Border>
                     </DockPanel>
-                </Page>
+                </Grid>
             </DockPanel>
         </Grid>
     </Border>

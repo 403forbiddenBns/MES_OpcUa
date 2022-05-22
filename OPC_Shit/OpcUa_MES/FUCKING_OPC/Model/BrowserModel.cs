@@ -14,19 +14,19 @@ namespace MES_OpcUa.Model
         }
         public ObservableCollection<OpcNodeInfo> Nodes
         {
-            get 
-            { 
-                return _nodes; 
+            get
+            {
+                return _nodes;
             }
-            set 
-            { 
+            set
+            {
                 _nodes = value;
             }
         }
 
-        public BrowserModel(OpcClient opcClient)
+        public BrowserModel(OpcClient client)
         {
-            _opcClient = opcClient;
+            _opcClient = client;
             _nodes = new ObservableCollection<OpcNodeInfo>();
         }
     }

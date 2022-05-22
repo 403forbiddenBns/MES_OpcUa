@@ -1,7 +1,8 @@
-﻿using System.Windows;
-using System.Windows.Input;
-using MES_OpcUa.Components;
+﻿using MES_OpcUa.Components;
 using MES_OpcUa.Model;
+using MES_OpcUa.View;
+using System.Windows;
+using System.Windows.Input;
 
 namespace MES_OpcUa.ViewModel
 {
@@ -9,12 +10,12 @@ namespace MES_OpcUa.ViewModel
     {
 
         #region Fields
-        
+
         private string _address = "opc.tcp://DESKTOP-4LC5DK7:53530";
         private MainModel _mainModel;
-        
+
         #endregion
-        
+
         #region Props
 
         public string Address
@@ -32,29 +33,32 @@ namespace MES_OpcUa.ViewModel
         private bool CanCloseApplicationCommandExecute(object p) => true;
         private void OnCloseApplicationCommandExecuted(object p)
         {
-            _mainModel?.OpcClient?.Disconnect();
+            _mainModel?.BrowserModel?.OpcClient?.Disconnect();
             Application.Current.Shutdown();
         }
         #endregion
 
         #region Connect
-        
+
         public ICommand ConnectToServer { get; }
         private bool CanConnectToServerExecute(object p) => true;
         private void OnConnectToServerExecuted(object p)
         {
-            _mainModel = new ((string)p, new Opc.UaFx.OpcSecurityPolicy(Opc.UaFx.OpcSecurityMode.None));
+            Address = (string)p;
+            _mainModel = new(Address);
 
+            BrowserViewModel browserVM = new BrowserViewModel(_mainModel.BrowserModel.OpcClient);
+
+            BrowserView browserView = new BrowserView();
+            browserView.Open(browserVM);
             //DEBUG: show connection status
-            MessageBox.Show(_mainModel.OpcClient.State.ToString(), "Connection status", 0, MessageBoxImage.Information);
-            
+            //MessageBox.Show(_mainModel.OpcClient.State.ToString(), "Connection status", 0, MessageBoxImage.Information);
         }
 
         #endregion
 
 
         #endregion
-
 
         #region ctor
 
@@ -69,6 +73,7 @@ namespace MES_OpcUa.ViewModel
 
         #region Methods
 
+        //Todo: Implement check address later
         public bool ValidateURI()
         {
             if (!(Address.Contains("opc://") && Address.Contains(':')))

@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MES_OpcUa.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace MES_OpcUa.View
 {
     /// <summary>
     /// Interaction logic for BrowserView.xaml
     /// </summary>
-    public partial class BrowserView : Window
+    public partial class BrowserView : Window, IView
     {
         public BrowserView()
         {
             InitializeComponent();
         }
+
+        public bool? Open(BrowserViewModel browserViewModel)
+        {
+            DataContext = browserViewModel;
+            return this.ShowDialog();
+        }
+    }
+
+    interface IView
+    {
+        bool? Open(BrowserViewModel browserVM);
     }
 }

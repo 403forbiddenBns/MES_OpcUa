@@ -1,19 +1,26 @@
-﻿using Opc.UaFx.Client;
+﻿using Opc.UaFx;
+using Opc.UaFx.Client;
 
 namespace MES_OpcUa.Model
 {
     public class MainModel
     {
-        private OpcClient _opcClient;
-        public OpcClient OpcClient
+        private BrowserModel _browserModel;
+        private OpcClient _client;
+
+        public BrowserModel BrowserModel
         {
-            get { return _opcClient; }
+            get { return _browserModel; }
         }
 
-        public MainModel(string address, Opc.UaFx.OpcSecurityPolicy opcSecurityPolicy)
+        public MainModel(string address)
         {
-            _opcClient = new OpcClient(address, opcSecurityPolicy);
-            _opcClient.Connect();
+            _client = new OpcClient(address, new OpcSecurityPolicy(OpcSecurityMode.None));
+            _browserModel = new BrowserModel(_client);
+            _browserModel.OpcClient.Connect();
+            //TODO: CHECK CONNECTION HERE
+
+
             //TODO: check initialization for security policy and handle try catch.
         }
 
