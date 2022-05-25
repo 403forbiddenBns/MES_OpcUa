@@ -36,7 +36,7 @@
                 <Grid DockPanel.Dock="Top"
                              Background="#12121d" HorizontalAlignment="Stretch" 
                              VerticalAlignment="Top" Height="20">
-                    <Border BorderThickness="1" BorderBrush="Green" 
+                    <Border BorderThickness="0,1,0,1" BorderBrush="Green" 
                             VerticalAlignment="Stretch"
                             HorizontalAlignment="Stretch"/>
                 </Grid>
