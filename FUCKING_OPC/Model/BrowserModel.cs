@@ -1,4 +1,5 @@
 ﻿using Opc.UaFx.Client;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace MES_OpcUa.Model
@@ -6,7 +7,7 @@ namespace MES_OpcUa.Model
     public class BrowserModel
     {
         private OpcClient _opcClient;
-        private ObservableCollection<OpcNodeInfo> _nodes; //TODO: NE FAKT BLYAT CHTO OpcNodeInfo
+        private ObservableCollection<OpcNodeInfo> _nodes;
 
         public OpcClient OpcClient
         {

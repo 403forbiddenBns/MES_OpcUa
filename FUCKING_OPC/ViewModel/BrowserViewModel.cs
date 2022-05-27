@@ -22,5 +22,26 @@ namespace MES_OpcUa.ViewModel
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
             _browserModel = new BrowserModel(client);
         }
+
+        public void FillNodeList(OpcNodeInfo node, int level = 0)
+        {
+            OpcNodeInfo rootNode = _browserModel.OpcClient.BrowseNode("i=84").Children();
+
+            _browserModel.Nodes.Add(rootNode);
+
+
+            foreach (var item in rootNode)
+            {
+            }
+
+            //var value = node.Attribute(OpcAttribute.DisplayName).Value;
+
+            //if (level == 0)
+            //Console.WriteLine($"_{level}{pattern}{value}{node.NodeId}");
+
+
+            //foreach (var childNode in node.Children())
+            //Browse(childNode, level);
+        }
     }
 }
