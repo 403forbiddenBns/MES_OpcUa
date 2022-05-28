@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\github\MES_OpcUa\FUCKING_OPC\obj\Debug\net5.0-windows\
+D:\gihub\WPF\MES_OpcUa\FUCKING_OPC\obj\Debug\net5.0-windows\
 MES_OpcUa
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\github\MES_OpcUa\FUCKING_OPC\App.xaml
+D:\gihub\WPF\MES_OpcUa\FUCKING_OPC\App.xaml
 21903219879
 
-151940846710
-328-274471203
+141805307093
+328284802994
 View\BrowserView.xaml;View\MainWindow.xaml;
 
-False
+True
 

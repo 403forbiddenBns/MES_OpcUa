@@ -48,7 +48,6 @@ namespace MES_OpcUa.ViewModel
             _mainModel = new(Address);
 
             BrowserViewModel browserVM = new BrowserViewModel(_mainModel.BrowserModel.OpcClient);
-
             BrowserView browserView = new BrowserView();
             browserView.Open(browserVM);
             //DEBUG: show connection status

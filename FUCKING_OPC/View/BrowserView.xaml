@@ -58,8 +58,9 @@
                                 BorderThickness="1" BorderBrush="#280017"
                                 MinWidth="200" Width="auto" DockPanel.Dock="Left" 
                                 HorizontalAlignment="Left">
-                            <TreeView x:Name="MainElementTree" Background="#1e1f31"
-                                      BorderThickness="1">
+                            <TreeView x:Name="BrowserTree" Background="#1e1f31"
+                                      BorderThickness="1" ItemsSource="{Binding Nodes}">
+
                             </TreeView>
                         </Border>
                         <Border Style="{DynamicResource SidePanel}" x:Name="RightPanel" 

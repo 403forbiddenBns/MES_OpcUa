@@ -50,6 +50,5 @@ namespace MES_OpcUa.ViewModel
                 temp(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
     }
 }
