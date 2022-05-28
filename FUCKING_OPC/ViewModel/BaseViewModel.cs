@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
+
 namespace MES_OpcUa.ViewModel
 {
     public class BaseViewModel : INotifyPropertyChanged

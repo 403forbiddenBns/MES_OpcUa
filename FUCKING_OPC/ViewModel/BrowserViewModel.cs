@@ -57,11 +57,6 @@ namespace MES_OpcUa.ViewModel
 
         }
 
-        private void FillTree(OpcClient client)
-        {
-            _browserTreeView = new TreeView();
-            _browserTreeView.Name = _browserModel.OpcClient?.BrowseNode("i=84").Name.Value;
-        }
 
         #endregion
 

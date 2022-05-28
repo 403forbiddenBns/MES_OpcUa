@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:MES_OpcUa.ViewModel"
         Height="200" Width="700" MaxHeight="200" MaxWidth="700" MinHeight="200" MinWidth="700"
-        WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
+        WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal"
         AllowsTransparency="True"
         BorderThickness="5" BorderBrush="#252629">
     <Window.DataContext>
