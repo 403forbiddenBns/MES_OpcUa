@@ -60,8 +60,11 @@
                                 HorizontalAlignment="Left">
                             <TreeView x:Name="BrowserTree" Background="#1e1f31"
                                       BorderThickness="1">
+                                <TreeView.DataContext>
+                                    <nodem:NodeViewModel/>
+                                </TreeView.DataContext>
                                 <TreeView.ItemTemplate>
-                                    <HierarchicalDataTemplate ItemsSource="{Binding Nodes}">
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Path=Nodes}">
                                         <TextBlock Text="{Binding Name}"/>
                                     </HierarchicalDataTemplate>
                                 </TreeView.ItemTemplate>

@@ -15,7 +15,7 @@ namespace MES_OpcUa.TreeElements
     
         public string Id { get; set; }
 
-        public OpcNodeInfo CurrentNode { get; private set; }
+        public static OpcNodeInfo CurrentNode { get; private set; }
 
         public ObservableCollection<TreeNodeItem> ChildNodes { get; private set; }
 
@@ -27,7 +27,7 @@ namespace MES_OpcUa.TreeElements
             Id = node.NodeId.ValueAsString;
         }
 
-        private ObservableCollection<TreeNodeItem> GetChilds()
+        public static ObservableCollection<TreeNodeItem> GetChilds()
         {
             ObservableCollection<TreeNodeItem> result = new ObservableCollection<TreeNodeItem>();
             var childs = CurrentNode.Children();
