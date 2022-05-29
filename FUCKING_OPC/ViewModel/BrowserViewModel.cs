@@ -19,6 +19,8 @@ namespace MES_OpcUa.ViewModel
         #endregion
 
         #region props
+
+        TreeViewItem _currentNode;
         public TreeView BrowserTreeView
         {
             get { return _browserTreeView; }

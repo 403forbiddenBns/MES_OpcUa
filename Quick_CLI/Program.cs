@@ -8,7 +8,7 @@ namespace Quick_CLI
     {
         static void Main()
         {
-            var client = new OpcClient("opc.tcp://172.24.182.20:45500", new OpcSecurityPolicy(OpcSecurityMode.None));
+            var client = new OpcClient("opc.tcp://172.24.182.20:45500", new OpcSecurityPolicy(OpcSecurityMode.None)); //opc.tcp://DESKTOP-4LC5DK7:53530
 
             client.Connect();
             /////////////////

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:nodem="clr-namespace:MES_OpcUa.TreeElements"
         mc:Ignorable="d" Width="600"
         MinHeight="600" MinWidth="800" 
         WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Normal" 
@@ -60,15 +61,10 @@
                             <TreeView x:Name="BrowserTree" Background="#1e1f31"
                                       BorderThickness="1">
                                 <TreeView.ItemTemplate>
-                                    <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                                    <HierarchicalDataTemplate ItemsSource="{Binding Nodes}">
                                         <TextBlock Text="{Binding Name}"/>
                                     </HierarchicalDataTemplate>
                                 </TreeView.ItemTemplate>
-                                <TreeView.ItemContainerStyle>
-                                    <Style TargetType="{x:Type TreeViewItem}">
-                                        <Setter Property="IsSelected" Value="{Binding isSelected, Mode=TwoWay}"/>
-                                    </Style>
-                                </TreeView.ItemContainerStyle>
                             </TreeView>
                         </Border>
                         <Border Style="{DynamicResource SidePanel}" x:Name="RightPanel" 
