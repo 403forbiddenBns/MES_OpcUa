@@ -11,7 +11,7 @@ namespace MES_OpcUa.ViewModel
 
         #region Fields
 
-        private string _address = "opc.tcp://DESKTOP-4LC5DK7:53530";
+        private string _address = "opc.tcp://172.24.182.20:45500"; //"opc.tcp://DESKTOP-4LC5DK7:53530"
         private MainModel _mainModel;
 
         #endregion
@@ -45,6 +45,8 @@ namespace MES_OpcUa.ViewModel
         private void OnConnectToServerExecuted(object p)
         {
             Address = (string)p;
+
+            //TODO: TRY TO IMPLEMENT TRANSMISSION TO MESSAGE BUS, THEN TRANSMIT THE INITIALIZED CLIENT TO MODEL
             _mainModel = new(Address);
 
             BrowserViewModel browserVM = new BrowserViewModel(_mainModel.BrowserModel.OpcClient);
@@ -55,7 +57,6 @@ namespace MES_OpcUa.ViewModel
         }
 
         #endregion
-
 
         #endregion
 

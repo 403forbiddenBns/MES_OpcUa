@@ -23,6 +23,5 @@ namespace MES_OpcUa.Model
 
             //TODO: check initialization for security policy and handle try catch.
         }
-
     }
 }

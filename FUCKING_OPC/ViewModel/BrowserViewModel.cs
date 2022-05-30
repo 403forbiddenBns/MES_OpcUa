@@ -68,8 +68,8 @@ namespace MES_OpcUa.ViewModel
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
             _browserModel = new BrowserModel(client);
             
-            Nodes = new ObservableCollection<OpcNodeInfo>();
-            Nodes.Add(client.BrowseNode("i=84"));
+            //Nodes = new ObservableCollection<OpcNodeInfo>();
+            //Nodes.Add(client.BrowseNode("i=84"));
         }
 
         #endregion

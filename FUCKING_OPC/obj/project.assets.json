@@ -921,23 +921,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BansheeDT\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\banshee\\.nuget\\packages\\": {},
+    "D:\\VSpackages\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\gihub\\WPF\\MES_OpcUa\\FUCKING_OPC\\MES_OpcUa.csproj",
+      "projectUniqueName": "D:\\github\\MES_OpcUa\\FUCKING_OPC\\MES_OpcUa.csproj",
       "projectName": "MES_OpcUa",
-      "projectPath": "D:\\gihub\\WPF\\MES_OpcUa\\FUCKING_OPC\\MES_OpcUa.csproj",
-      "packagesPath": "C:\\Users\\BansheeDT\\.nuget\\packages\\",
-      "outputPath": "D:\\gihub\\WPF\\MES_OpcUa\\FUCKING_OPC\\obj\\",
+      "projectPath": "D:\\github\\MES_OpcUa\\FUCKING_OPC\\MES_OpcUa.csproj",
+      "packagesPath": "C:\\Users\\banshee\\.nuget\\packages\\",
+      "outputPath": "D:\\github\\MES_OpcUa\\FUCKING_OPC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\VSpackages\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\BansheeDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\banshee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

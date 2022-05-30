@@ -22,7 +22,8 @@ namespace MES_OpcUa.TreeElements
         public TreeNodeItem(OpcNodeInfo node)
         {
             CurrentNode = node;
-            Name = node.Name.Value;
+            //TODO: BOTTOM LINE NOT WORKING! NEED TO FIX
+            //Name = node.Name.Value;
             ChildNodes = GetChilds();
             Id = node.NodeId.ValueAsString;
         }

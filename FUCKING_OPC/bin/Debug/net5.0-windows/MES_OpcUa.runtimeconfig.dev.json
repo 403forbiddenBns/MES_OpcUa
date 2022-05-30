@@ -1,9 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\BansheeDT\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\BansheeDT\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\banshee\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\banshee\\.nuget\\packages",
+      "D:\\VSpackages\\NuGetPackages"
     ]
   }
 }

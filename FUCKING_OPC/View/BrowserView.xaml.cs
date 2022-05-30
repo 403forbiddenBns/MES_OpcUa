@@ -13,15 +13,10 @@ namespace MES_OpcUa.View
             InitializeComponent();
         }
 
-        public bool? Open(BrowserViewModel browserViewModel)
+        public bool? Open(BrowserViewModel vmInstance)
         {
-            DataContext = browserViewModel;
+            DataContext = vmInstance;
             return this.ShowDialog();
         }
-    }
-
-    interface IView
-    {
-        bool? Open(BrowserViewModel browserVM);
     }
 }
