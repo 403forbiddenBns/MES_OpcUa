@@ -36,7 +36,7 @@ namespace MES_OpcUa.ViewModel
         private bool CanCloseApplicationCommandExecute(object p) => true;
         private void OnCloseApplicationCommandExecuted(object p)
         {
-            _mainModel?.BrowserModel?.OpcClient?.Disconnect();
+            _client?.Disconnect();
             Application.Current.Shutdown();
         }
 
@@ -52,7 +52,6 @@ namespace MES_OpcUa.ViewModel
 
             //TODO: TRY TO IMPLEMENT TRANSMISSION TO MESSAGE BUS, THEN TRANSMIT THE INITIALIZED CLIENT TO MODEL
             _mainModel = new(Address);
-            _clientStore.ClientCreated += OnClientCreated;
 
             BrowserViewModel browserVM = new BrowserViewModel(_clientStore);
             BrowserView browserView = new BrowserView();
@@ -72,6 +71,7 @@ namespace MES_OpcUa.ViewModel
             _clientStore = clientStore;
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
             ConnectToServer = new LambaCommand(OnConnectToServerExecuted, CanConnectToServerExecute);
+            _clientStore.ClientCreated += OnClientCreated;
         }
 
         public void OnClientCreated(OpcClient client)

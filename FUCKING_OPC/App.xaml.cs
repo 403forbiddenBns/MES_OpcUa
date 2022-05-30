@@ -13,6 +13,8 @@ namespace MES_OpcUa
         {
             ClientStore clientStore = new ClientStore();
             MainViewModel mvm = new MainViewModel(clientStore);
+
+            base.OnStartup(e);
         }
     }
 }
