@@ -1,4 +1,5 @@
-﻿using Opc.UaFx;
+﻿using MES_OpcUa.Components;
+using Opc.UaFx;
 using Opc.UaFx.Client;
 
 namespace MES_OpcUa.Model
@@ -7,6 +8,7 @@ namespace MES_OpcUa.Model
     {
         private BrowserModel _browserModel;
         private OpcClient _client;
+        private ClientStore _clientStore;
 
         public BrowserModel BrowserModel
         {
@@ -14,14 +16,12 @@ namespace MES_OpcUa.Model
         }
 
         public MainModel(string address)
-        {
-            _client = new OpcClient(address, new OpcSecurityPolicy(OpcSecurityMode.None));
+        { //TODO: FIX!
+            _client = new OpcClient(address);
+
+
             _browserModel = new BrowserModel(_client);
             _browserModel.OpcClient.Connect();
-            //TODO: CHECK CONNECTION HERE
-
-
-            //TODO: check initialization for security policy and handle try catch.
         }
     }
 }

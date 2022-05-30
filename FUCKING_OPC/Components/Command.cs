@@ -1,4 +1,5 @@
 ﻿using MES_OpcUa.ViewModel;
+using Opc.UaFx;
 using Opc.UaFx.Client;
 using System;
 using System.Windows.Input;
@@ -17,12 +18,12 @@ namespace MES_OpcUa.Components
         public abstract bool CanExecute(object? parameter);
     }
 
-    public class MainExitCommand : Command
+    public class ConnectCommand : Command
     {
         private readonly MainViewModel _mainViewModel;
         private readonly ClientStore _clientStore;
 
-        public MainExitCommand(MainViewModel mainViewModel, ClientStore clientStore)
+        public ConnectCommand(MainViewModel mainViewModel, ClientStore clientStore)
         {
             _mainViewModel = mainViewModel;
             _clientStore = clientStore;
@@ -32,7 +33,7 @@ namespace MES_OpcUa.Components
 
         public override void Execute(object parameter)
         {
-            OpcClient client = new OpcClient(_mainViewModel.Address);
+            OpcClient client = new OpcClient(_mainViewModel.Address, new OpcSecurityPolicy(OpcSecurityMode.None));
             _clientStore.CreateClient(client);
         }
     }

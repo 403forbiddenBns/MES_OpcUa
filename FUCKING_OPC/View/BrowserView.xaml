@@ -72,7 +72,6 @@
                                 BorderThickness="1" BorderBrush="#280017"
                                 MinWidth="200" Width="100" DockPanel.Dock="Right"
                                 />
-
                         <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                 BorderThickness="0,0,0,0" BorderBrush="#280017">
                             <Border VerticalAlignment="Stretch" 

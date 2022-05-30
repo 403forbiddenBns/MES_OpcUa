@@ -1,6 +1,7 @@
 ﻿using MES_OpcUa.Components;
 using MES_OpcUa.Model;
 using MES_OpcUa.View;
+using Opc.UaFx.Client;
 using System.Windows;
 using System.Windows.Input;
 
@@ -8,11 +9,12 @@ namespace MES_OpcUa.ViewModel
 {
     public partial class MainViewModel : BaseViewModel
     {
-
         #region Fields
 
         private string _address = "opc.tcp://172.24.182.20:45500"; //"opc.tcp://DESKTOP-4LC5DK7:53530"
         private MainModel _mainModel;
+        private OpcClient _client;
+        private ClientStore _clientStore;
 
         #endregion
 
@@ -29,6 +31,7 @@ namespace MES_OpcUa.ViewModel
         #region Commands
 
         #region CloseApp
+        
         public ICommand CloseApplicationCommand { get; }
         private bool CanCloseApplicationCommandExecute(object p) => true;
         private void OnCloseApplicationCommandExecuted(object p)
@@ -36,6 +39,7 @@ namespace MES_OpcUa.ViewModel
             _mainModel?.BrowserModel?.OpcClient?.Disconnect();
             Application.Current.Shutdown();
         }
+
         #endregion
 
         #region Connect
@@ -48,8 +52,9 @@ namespace MES_OpcUa.ViewModel
 
             //TODO: TRY TO IMPLEMENT TRANSMISSION TO MESSAGE BUS, THEN TRANSMIT THE INITIALIZED CLIENT TO MODEL
             _mainModel = new(Address);
+            _clientStore.ClientCreated += OnClientCreated;
 
-            BrowserViewModel browserVM = new BrowserViewModel(_mainModel.BrowserModel.OpcClient);
+            BrowserViewModel browserVM = new BrowserViewModel(_clientStore);
             BrowserView browserView = new BrowserView();
             browserView.Open(browserVM);
             //DEBUG: show connection status
@@ -62,11 +67,16 @@ namespace MES_OpcUa.ViewModel
 
         #region ctor
 
-        public MainViewModel()
+        public MainViewModel(ClientStore clientStore)
         {
-            //TODO: HERE!
+            _clientStore = clientStore;
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
             ConnectToServer = new LambaCommand(OnConnectToServerExecuted, CanConnectToServerExecute);
+        }
+
+        public void OnClientCreated(OpcClient client)
+        {
+            _client = client;        
         }
 
         #endregion

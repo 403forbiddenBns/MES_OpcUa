@@ -14,7 +14,7 @@ namespace MES_OpcUa.ViewModel
 
         private BrowserModel _browserModel;
         private TreeView _browserTreeView;
-        private ObservableCollection<OpcNodeInfo> _nodes;
+        private ClientStore _clientStore;
 
         #endregion
 
@@ -31,18 +31,6 @@ namespace MES_OpcUa.ViewModel
             }
         }
 
-        public ObservableCollection<OpcNodeInfo> Nodes
-        {
-            get
-            {
-                return _nodes;
-            }
-            set
-            {
-                _nodes = value;
-            }
-        }
-
         public ICommand CloseApplicationCommand { get; }
 
 
@@ -55,19 +43,18 @@ namespace MES_OpcUa.ViewModel
         {
             _browserModel.OpcClient?.Disconnect();
             Application.Current.Shutdown();
-            _nodes = new ObservableCollection<OpcNodeInfo>();
-
         }
 
 
         #endregion
 
         #region ctor
-        public BrowserViewModel(OpcClient client)
+
+        public BrowserViewModel(ClientStore clientStore)
         {
+            _clientStore = clientStore;
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
-            _browserModel = new BrowserModel(client);
-            
+            _browserModel = new BrowserModel(clientStore); //TODO: HOW TO GET CLIENT OUT THERE?????
             //Nodes = new ObservableCollection<OpcNodeInfo>();
             //Nodes.Add(client.BrowseNode("i=84"));
         }
