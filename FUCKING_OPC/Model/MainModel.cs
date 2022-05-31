@@ -6,22 +6,16 @@ namespace MES_OpcUa.Model
 {
     public class MainModel
     {
-        private BrowserModel _browserModel;
         private OpcClient _client;
-        private ClientStore _clientStore;
 
-        public BrowserModel BrowserModel
+        public OpcClient Client
         {
-            get { return _browserModel; }
+            get { return _client; }
         }
 
-        public MainModel(string address)
-        { //TODO: FIX!
-            _client = new OpcClient(address);
-
-
-            _browserModel = new BrowserModel(_client);
-            _browserModel.OpcClient.Connect();
+        public MainModel(OpcClient client)
+        {
+            _client = client;
         }
     }
 }

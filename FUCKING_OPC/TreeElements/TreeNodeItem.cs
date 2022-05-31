@@ -1,22 +1,25 @@
-﻿using Opc.UaFx;
+﻿using MES_OpcUa.ViewModel;
 using Opc.UaFx.Client;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MES_OpcUa.TreeElements
 {
-    public class TreeNodeItem
+    public class TreeNodeItem : BaseViewModel
     {
-        public string Name { get; set; }
-    
-        public string Id { get; set; }
-
+        private string _name;
+        public string Name 
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+                OnPropertyChanged(nameof(_name));
+            } 
+        }
         public static OpcNodeInfo CurrentNode { get; private set; }
-
         public ObservableCollection<TreeNodeItem> ChildNodes { get; private set; }
 
         public TreeNodeItem(OpcNodeInfo node)
@@ -25,7 +28,6 @@ namespace MES_OpcUa.TreeElements
             //TODO: BOTTOM LINE NOT WORKING! NEED TO FIX
             //Name = node.Name.Value;
             ChildNodes = GetChilds();
-            Id = node.NodeId.ValueAsString;
         }
 
         public static ObservableCollection<TreeNodeItem> GetChilds()

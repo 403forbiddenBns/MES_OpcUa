@@ -11,9 +11,6 @@ namespace MES_OpcUa
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            ClientStore clientStore = new ClientStore();
-            MainViewModel mvm = new MainViewModel(clientStore);
-
             base.OnStartup(e);
         }
     }

@@ -8,13 +8,13 @@ namespace MES_OpcUa.Model
     public class BrowserModel
     {
         //private OpcClient _opcClient;
-        ClientStore _clientStore;
+        private OpcClient _client;
 
+        public OpcClient Client { get { return _client; } set { _client = value; } }
 
-        public BrowserModel(ClientStore clientStore)
+        public BrowserModel(OpcClient client)
         {
-            _clientStore = clientStore;
-            //_opcClient = client;
+            _client = client;
         }
     }
 }
