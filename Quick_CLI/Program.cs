@@ -1,6 +1,7 @@
 ﻿using Opc.UaFx;
 using Opc.UaFx.Client;
 using System;
+using System.Collections;
 
 namespace Quick_CLI
 {
@@ -8,18 +9,16 @@ namespace Quick_CLI
     {
         static void Main()
         {
-            var client = new OpcClient("opc.tcp://172.24.182.20:45500", new OpcSecurityPolicy(OpcSecurityMode.None)); //opc.tcp://DESKTOP-4LC5DK7:53530
+            var client = new OpcClient("opc.tcp://DESKTOP-4LC5DK7:53530", new OpcSecurityPolicy(OpcSecurityMode.None)); //opc.tcp://172.24.182.20:45500
 
             client.Connect();
             /////////////////
 
-            var res = client.BrowseNode("i=84").Children();
+            var res = client.BrowseNode("i=84");
 
-            foreach (var item in res)
-            {
-                Console.WriteLine(item.Name);
-            }
+            var bar = Foo(res);
 
+            Console.WriteLine(bar);
 
             //////////////////
             client.Disconnect();
@@ -37,6 +36,11 @@ namespace Quick_CLI
 
             foreach (var childNode in node.Children())
                 Browse(childNode, level);
+        }
+
+        static IEnumerable Foo(OpcNodeInfo node)
+        {
+            yield return node.Children();
         }
 
 

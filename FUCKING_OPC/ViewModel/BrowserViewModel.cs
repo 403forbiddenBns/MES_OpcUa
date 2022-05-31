@@ -22,7 +22,7 @@ namespace MES_OpcUa.ViewModel
 
         #region props
 
-        TreeViewItem _currentNode;
+        readonly TreeViewItem _currentNode;
         public TreeView BrowserTreeView
         {
             get { return _browserTreeView; }
