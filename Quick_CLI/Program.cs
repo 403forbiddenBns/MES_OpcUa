@@ -16,7 +16,12 @@ namespace Quick_CLI
 
             var res = client.BrowseNode("i=84");
 
-            var bar = Foo(res);
+            var bar = res.Children();
+
+            foreach (var item in bar)
+            {
+                Console.WriteLine(item.DisplayName);
+            }
 
             Console.WriteLine(bar);
 
@@ -37,12 +42,5 @@ namespace Quick_CLI
             foreach (var childNode in node.Children())
                 Browse(childNode, level);
         }
-
-        static IEnumerable Foo(OpcNodeInfo node)
-        {
-            yield return node.Children();
-        }
-
-
     }
 }
