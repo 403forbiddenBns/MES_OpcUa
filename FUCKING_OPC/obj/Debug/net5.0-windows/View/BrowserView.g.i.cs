@@ -124,7 +124,7 @@ namespace MES_OpcUa.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MES_OpcUa;V1.0.0.0;component/view/browserview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MES_OpcUa;component/view/browserview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\BrowserView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

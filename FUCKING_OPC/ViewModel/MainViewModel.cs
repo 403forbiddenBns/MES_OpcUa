@@ -1,6 +1,4 @@
 ﻿using MES_OpcUa.Components;
-using MES_OpcUa.Model;
-using MES_OpcUa.View;
 using Opc.UaFx.Client;
 using System.Windows;
 using System.Windows.Input;
@@ -13,7 +11,6 @@ namespace MES_OpcUa.ViewModel
 
         private string _address = "opc.tcp://172.24.182.20:45500"; //"opc.tcp://DESKTOP-4LC5DK7:53530"
         private OpcClient _client;
-        private ClientStore _clientStore;
 
         #endregion
 
@@ -34,10 +31,8 @@ namespace MES_OpcUa.ViewModel
 
         public MainViewModel()
         {
-            _clientStore = new ClientStore();
             CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
-            ConnectToServer = new ConnectCommand(this, _clientStore);
-            _clientStore.ClientCreated += OnClientCreated;
+            ConnectToServer = new ConnectCommand(this);
         }
 
         public void OnClientCreated(OpcClient client)
@@ -51,7 +46,7 @@ namespace MES_OpcUa.ViewModel
         #region Commands
 
         #region CloseApp
-        
+
         public ICommand CloseApplicationCommand { get; }
         private bool CanCloseApplicationCommandExecute(object p) => true;
         private void OnCloseApplicationCommandExecuted(object p)

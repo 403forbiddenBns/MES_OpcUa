@@ -13,12 +13,10 @@ namespace MES_OpcUa.Components
     public class ConnectCommand : Command
     {
         private readonly MainViewModel _mainViewModel;
-        private readonly ClientStore _clientStore;
 
-        public ConnectCommand(MainViewModel mainViewModel, ClientStore clientStore)
+        public ConnectCommand(MainViewModel mainViewModel)
         {
             _mainViewModel = mainViewModel;
-            _clientStore = clientStore;
         }
 
         public override bool CanExecute(object? parameter) => true;
@@ -26,9 +24,7 @@ namespace MES_OpcUa.Components
         public override void Execute(object parameter)
         {
             OpcClient client = new OpcClient(_mainViewModel.Address, new OpcSecurityPolicy(OpcSecurityMode.None));
-            _clientStore.CreateClient(client);
-
-            BrowserViewModel browserVM = new BrowserViewModel(_clientStore, _mainViewModel.Client);
+            BrowserViewModel browserVM = new BrowserViewModel(_mainViewModel.Client);
             BrowserView browserView = new BrowserView();
             browserView.Open(browserVM);
             //DEBUG: show connection status

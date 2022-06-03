@@ -1,23 +1,26 @@
-﻿using MES_OpcUa.ViewModel;
-using Opc.UaFx.Client;
+﻿using Opc.UaFx.Client;
 using System.Collections.ObjectModel;
 
-namespace MES_OpcUa.TreeElements
+namespace MES_OpcUa.ViewModel
 {
-    public class TreeNodeViewModel : BaseViewModel
+    public class NodeViewModel : BaseViewModel
     {
         private string _name;
+        private string _nodeId;
         private OpcNodeInfo _currentNode;
-        private ObservableCollection<TreeNodeViewModel> _childNodes;
-        public ObservableCollection<TreeNodeViewModel> ChildNodes
-        { 
-            get 
-            { 
-                return _childNodes; 
+        private ObservableCollection<NodeViewModel> _childNodes;
+
+
+
+        public ObservableCollection<NodeViewModel> ChildNodes
+        {
+            get
+            {
+                return _childNodes;
             }
-            set 
-            { 
-                if(_childNodes != value)
+            set
+            {
+                if (_childNodes != value)
                 {
                     _childNodes = value;
                     RaisePropertyChanged(() => _childNodes);
@@ -25,7 +28,7 @@ namespace MES_OpcUa.TreeElements
             }
         }
 
-        public string Name 
+        public string Name
         {
             get
             {
@@ -33,19 +36,19 @@ namespace MES_OpcUa.TreeElements
             }
             set { _name = value; RaisePropertyChanged(() => _name); }
         }
-        public OpcNodeInfo CurrentNode 
+        public OpcNodeInfo CurrentNode
         {
-            get { return _currentNode; } 
+            get { return _currentNode; }
             set { Set(ref _currentNode, value); } //TODO: IS IT EVEN WORKS?
         }
 
-        public TreeNodeViewModel(OpcNodeInfo node)
+        public NodeViewModel(OpcNodeInfo node)
         {
             _currentNode = node;
             Name = node.DisplayName;
             //TODO: BOTTOM LINE NOT WORKING! NEED TO FIX
             //Name = node.Name.Value;
-            ChildNodes = new ObservableCollection<TreeNodeViewModel>();
+            ChildNodes = new ObservableCollection<NodeViewModel>();
         }
 
         //public static ObservableCollection<TreeNodeViewModel> GetChilds()

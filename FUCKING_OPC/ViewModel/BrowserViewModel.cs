@@ -1,6 +1,7 @@
 ﻿using MES_OpcUa.Components;
 using MES_OpcUa.Model;
 using Opc.UaFx.Client;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -12,11 +13,10 @@ namespace MES_OpcUa.ViewModel
         #region vars
 
         private BrowserModel _browserModel;
-        private ClientStore _clientStore;
-
         private TreeView _browserTreeView;
-        
         private OpcClient _client;
+        private readonly OpcNodeInfo _rootNode;
+
         public ICommand CloseApplicationCommand { get; }
         #endregion
 
@@ -54,15 +54,23 @@ namespace MES_OpcUa.ViewModel
 
         #region ctor
 
-        public BrowserViewModel(ClientStore clientStore, OpcClient client)
+        public BrowserViewModel(OpcClient client)
         {
-            _clientStore = clientStore;
+            if (client == null)
+                throw new NullReferenceException(nameof(client));
             Client = client;
-            CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
             _browserModel = new BrowserModel(client);
-
+            _browserTreeView = new TreeView();
+            CloseApplicationCommand = new LambaCommand(OnCloseApplicationCommandExecuted, CanCloseApplicationCommandExecute);
+            _rootNode = client.BrowseNode("i=84");
+            
             //Nodes = new ObservableCollection<OpcNodeInfo>();
             //Nodes.Add(client.BrowseNode("i=84"));
+        }
+
+        private void FillTreeWithOpcNodes(TreeView tree, OpcClient client)
+        {
+            tree.Items.Add(_rootNode); //HOW TO ADD VIEW MODELS IN TREE? SHOULD I DO THAT? WATCH SEAN ADD SOMTHING LIKE THAT
         }
 
         #endregion

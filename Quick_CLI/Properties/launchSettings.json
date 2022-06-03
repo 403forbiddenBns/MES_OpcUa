@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Quick_CLI": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
